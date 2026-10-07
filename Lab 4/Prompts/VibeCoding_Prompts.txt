@@ -1,0 +1,75 @@
+LAB 4 - VIBE CODING PROMPTS
+Connect Four Project
+
+========================================
+TASK 1 - WIN DETECTION
+========================================
+
+Task 1: Inspect the existing Connect Four project and fix the win detection logic.
+
+Requirements:
+1. Detect horizontal wins.
+2. Detect vertical wins.
+3. Detect diagonal wins in both diagonal directions.
+4. A sequence shorter than four must not be considered a win.
+5. Do not rewrite the project unnecessarily.
+6. Keep the existing Board interface and standard-library-only design.
+
+Explain the problem in the existing winner() function and provide the corrected code.
+
+
+========================================
+TASK 2 - GAME TERMINATION
+========================================
+
+Task 2: Inspect the existing Connect Four code, especially game.py and board.py. Do not rewrite the project and do not modify Task 1's win detection logic. Fix only the game termination and move-handling behavior.
+
+Requirements:
+1. Invalid column input must not change the board.
+2. A column outside 1-7 must be rejected safely.
+3. A full column must be rejected without changing the board.
+4. The AI must never cause the game to terminate unexpectedly just because it selects an unavailable column.
+5. A winning move must immediately end the game before another turn is requested.
+6. A completely full board with no winner must end as a draw.
+7. Quitting with 'q' must exit cleanly.
+
+Keep the existing modular structure and standard-library-only design. Explain which files and lines need to change before providing the code.
+
+
+========================================
+TASK 3 - AI IMPROVEMENT
+========================================
+
+Task 3: Inspect the existing Connect Four AI code, especially ai.py, together with board.py. Do not rewrite the project and do not modify the completed Task 1 or Task 2 behavior.
+
+Improve only the AI decision logic.
+
+Requirements:
+1. If the AI can win immediately with a legal move, it must choose that move.
+2. If the opponent has an immediate winning move on their next turn, the AI must block it.
+3. Otherwise, choose a legal available column.
+4. Never choose a full column.
+5. Keep the implementation simple, deterministic where possible, and standard-library-only.
+6. Preserve the existing Board and Game interfaces.
+
+Explain the decision logic before providing the code.
+
+
+========================================
+TASK 4 - MOVE-LEVEL FEEDBACK
+========================================
+
+Task 4: Improve the move-level feedback in the existing Connect Four game.
+
+Inspect game.py and the existing Board/AI code. Do not rewrite the project and do not modify the completed Task 1, Task 2, or Task 3 logic.
+
+Requirements:
+1. After every successful player or AI disc placement, display one concise feedback message showing which player placed the disc and which column was used.
+2. Do not display the feedback message when a move is invalid or a column is full.
+3. Display the message exactly once per actual move.
+4. The feedback must happen after board.drop() successfully places the disc.
+5. AI simulation moves used to check wins or blocks must not produce any feedback messages.
+6. Keep the existing modular structure and standard-library-only design.
+7. Make the smallest necessary change to game.py.
+
+Explain the change briefly and then provide the complete updated game.py.
